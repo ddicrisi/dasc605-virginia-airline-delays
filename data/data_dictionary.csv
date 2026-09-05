@@ -1,0 +1,37 @@
+variable,type,role,definition
+Year,categorical,scope,Calendar year
+Month,categorical,time,Calendar month number
+DayofMonth,categorical,time,Day of month
+DayOfWeek,categorical,time,Day of week number
+FlightDate,date,identifier,Flight date
+Reporting_Airline,categorical,predictor,Reporting carrier code
+Flight_Number_Reporting_Airline,categorical,identifier,Reporting carrier flight number
+Origin,categorical,predictor,Origin airport code
+OriginState,categorical,scope,Origin state abbreviation
+Dest,categorical,predictor,Destination airport code
+DestState,categorical,predictor,Destination state abbreviation
+CRSDepTime,categorical,predictor,Scheduled departure time
+DepTime,categorical,observed,Actual departure time
+DepDelay,continuous,predictor,Departure delay in minutes; early departures are negative
+DepDel15,categorical,outcome,Departure was 15 or more minutes late
+TaxiOut,continuous,predictor,Taxi-out time in minutes
+CRSArrTime,categorical,predictor,Scheduled arrival time
+ArrTime,categorical,observed,Actual arrival time
+ArrDelay,continuous,outcome,Arrival delay in minutes; early arrivals are negative
+ArrDel15,categorical,outcome,BTS indicator that arrival was 15 or more minutes late
+TaxiIn,continuous,predictor,Taxi-in time in minutes
+CRSElapsedTime,continuous,predictor,Scheduled elapsed time in minutes
+ActualElapsedTime,continuous,observed,Actual elapsed time in minutes
+AirTime,continuous,predictor,Airborne time in minutes
+Distance,continuous,predictor,Distance in miles
+Cancelled,categorical,outcome,Flight cancellation indicator
+CancellationCode,categorical,outcome,Cancellation reason code
+Diverted,categorical,outcome,Flight diversion indicator
+CarrierDelay,continuous,explanatory,Minutes attributed to carrier delay
+WeatherDelay,continuous,explanatory,Minutes attributed to weather delay
+NASDelay,continuous,explanatory,Minutes attributed to the National Airspace System
+SecurityDelay,continuous,explanatory,Minutes attributed to security delay
+LateAircraftDelay,continuous,explanatory,Minutes attributed to a late arriving aircraft
+MinutesRecovered,continuous,derived,DepDelay minus ArrDelay; positive values indicate time recovered
+Delayed15,categorical,derived,1 when ArrDelay is at least 15 minutes for noncancelled nondiverted flights
+
